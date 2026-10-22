@@ -1,0 +1,2 @@
+decision_threshold,precision,recall,f1_score,pr_auc,roc_auc,true_positives,false_positives,true_negatives,false_negatives
+0.66,0.8214,0.902,0.8598,0.9127,0.9838,46,10,1439,5

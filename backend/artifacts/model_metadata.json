@@ -1,0 +1,97 @@
+{
+  "model_name": "HistGradientBoosting",
+  "model_type": "HistGradientBoostingClassifier",
+  "model_version": "1.0.0",
+  "created_at": "2026-10-22T12:31:22.551259+00:00",
+  "dataset_source": "AI4I 2020 Predictive Maintenance Dataset (UCI Machine Learning Repository #601)",
+  "target_column": "Machine failure",
+  "input_features": [
+    "Type",
+    "Air temperature [K]",
+    "Process temperature [K]",
+    "Rotational speed [rpm]",
+    "Torque [Nm]",
+    "Tool wear [min]"
+  ],
+  "categorical_features": [
+    "Type"
+  ],
+  "numeric_features": [
+    "Air temperature [K]",
+    "Process temperature [K]",
+    "Rotational speed [rpm]",
+    "Torque [Nm]",
+    "Tool wear [min]"
+  ],
+  "excluded_features": [
+    "UDI",
+    "Product ID",
+    "TWF",
+    "HDF",
+    "PWF",
+    "OSF",
+    "RNF"
+  ],
+  "selected_classification_threshold": 0.66,
+  "selection_criterion": "Ranked candidate models by validation set PR-AUC; tuned decision threshold by maximizing validation F1-score to balance missed breakdowns (Recall) against false alarms (Precision).",
+  "evaluation_metrics": {
+    "decision_threshold": 0.66,
+    "total_test_samples": 1500,
+    "actual_failures": 51,
+    "actual_healthy": 1449,
+    "predicted_failures": 56,
+    "predicted_healthy": 1444,
+    "true_positives": 46,
+    "false_positives": 10,
+    "true_negatives": 1439,
+    "false_negatives": 5,
+    "precision": 0.8214,
+    "recall": 0.902,
+    "f1_score": 0.8598,
+    "pr_auc": 0.9127,
+    "roc_auc": 0.9838,
+    "confusion_matrix": [
+      [
+        1439,
+        10
+      ],
+      [
+        5,
+        46
+      ]
+    ],
+    "classification_report": {
+      "No Failure": {
+        "precision": 0.9965373961218836,
+        "recall": 0.9930986887508627,
+        "f1-score": 0.9948150708606982,
+        "support": 1449.0
+      },
+      "Failure": {
+        "precision": 0.8214285714285714,
+        "recall": 0.9019607843137255,
+        "f1-score": 0.8598130841121495,
+        "support": 51.0
+      },
+      "accuracy": 0.99,
+      "macro avg": {
+        "precision": 0.9089829837752275,
+        "recall": 0.9475297365322941,
+        "f1-score": 0.9273140774864239,
+        "support": 1500.0
+      },
+      "weighted avg": {
+        "precision": 0.9905836960823109,
+        "recall": 0.99,
+        "f1-score": 0.9902250033112474,
+        "support": 1500.0
+      }
+    }
+  },
+  "known_limitations": [
+    "Trained on AI4I 2020 synthetic milling machine simulation dataset.",
+    "Contains 3.39% minority failure class rate; performance may vary under severe operational shift.",
+    "Does not contain direct continuous run-to-failure degradation trajectories for true RUL estimation.",
+    "Failure modes (TWF, HDF, PWF, OSF, RNF) are physical causes and must not be fed as classifier features."
+  ]
+}

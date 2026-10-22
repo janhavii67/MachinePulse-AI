@@ -1,0 +1,38 @@
+# Python virtual environment
+.venv/
+venv/
+env/
+ENV/
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+
+# Pytest & test cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Scikit-learn & joblib cache
+*.joblib.tmp
+*.pkl
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Reports and generated models (optional)
+*.tmp
+*.log
+
+# SQLite runtime files (WAL mode journals — not for source control)
+*.db-shm
+*.db-wal
+
+# Frontend build artifacts and dependencies
+frontend/dist/
+frontend/node_modules/
+frontend/.vite/

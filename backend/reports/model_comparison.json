@@ -1,0 +1,32 @@
+[
+  {
+    "model_name":"HistGradientBoosting",
+    "val_pr_auc":0.7043,
+    "val_roc_auc":0.927,
+    "val_f1_default_0.50":0.6481,
+    "val_f1_tuned":0.66,
+    "tuned_threshold":0.66,
+    "val_precision_at_thresh":0.6735,
+    "val_recall_at_thresh":0.6471
+  },
+  {
+    "model_name":"RandomForest",
+    "val_pr_auc":0.5929,
+    "val_roc_auc":0.9396,
+    "val_f1_default_0.50":0.6327,
+    "val_f1_tuned":0.6526,
+    "tuned_threshold":0.52,
+    "val_precision_at_thresh":0.7045,
+    "val_recall_at_thresh":0.6078
+  },
+  {
+    "model_name":"LogisticRegression_Baseline",
+    "val_pr_auc":0.3083,
+    "val_roc_auc":0.8402,
+    "val_f1_default_0.50":0.1918,
+    "val_f1_tuned":0.3725,
+    "tuned_threshold":0.88,
+    "val_precision_at_thresh":0.3725,
+    "val_recall_at_thresh":0.3725
+  }
+]

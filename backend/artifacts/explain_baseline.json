@@ -1,0 +1,78 @@
+{
+  "method": "healthy_median_mode_baseline",
+  "description": "Healthy baselines computed from non-failure rows (Machine failure == 0) in AI4I 2020. Used as reference point for occlusion-based local feature attribution.",
+  "source_dataset": "AI4I 2020 Predictive Maintenance Dataset",
+  "generated_at": "2026-10-21T15:43:50.358254+00:00",
+  "total_records": 10000,
+  "non_failure_records": 9661,
+  "failure_records": 339,
+  "baseline_values": {
+    "Type": "L",
+    "Air temperature [K]": 300.0,
+    "Process temperature [K]": 310.0,
+    "Rotational speed [rpm]": 1507.0,
+    "Torque [Nm]": 39.9,
+    "Tool wear [min]": 107.0
+  },
+  "training_ranges": {
+    "Air temperature [K]": {
+      "min": 295.3,
+      "max": 304.5,
+      "q25": 298.3,
+      "median": 300.1,
+      "q75": 301.5,
+      "std": 2.0,
+      "non_fail_median": 300.0
+    },
+    "Process temperature [K]": {
+      "min": 305.7,
+      "max": 313.8,
+      "q25": 308.8,
+      "median": 310.1,
+      "q75": 311.1,
+      "std": 1.48,
+      "non_fail_median": 310.0
+    },
+    "Rotational speed [rpm]": {
+      "min": 1168.0,
+      "max": 2886.0,
+      "q25": 1423.0,
+      "median": 1503.0,
+      "q75": 1612.0,
+      "std": 179.28,
+      "non_fail_median": 1507.0
+    },
+    "Torque [Nm]": {
+      "min": 3.8,
+      "max": 76.6,
+      "q25": 33.2,
+      "median": 40.1,
+      "q75": 46.8,
+      "std": 9.97,
+      "non_fail_median": 39.9
+    },
+    "Tool wear [min]": {
+      "min": 0.0,
+      "max": 253.0,
+      "q25": 53.0,
+      "median": 108.0,
+      "q75": 162.0,
+      "std": 63.65,
+      "non_fail_median": 107.0
+    },
+    "Type": {
+      "allowed_values": [
+        "L",
+        "M",
+        "H"
+      ],
+      "distribution": {
+        "L": 0.6,
+        "M": 0.3,
+        "H": 0.1
+      },
+      "mode": "L"
+    }
+  },
+  "limitations_note": "Baseline substitution isolates univariate deviation from healthy medians. Feature interactions and correlated multi-sensor shifts are not decomposed."
+}

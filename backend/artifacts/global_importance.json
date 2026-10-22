@@ -1,0 +1,50 @@
+{
+  "method": "permutation_importance",
+  "description": "Permutation feature importance evaluated on held-out stratified test data (20%). Measures mean decrease in ROC-AUC when each feature column is randomly shuffled.",
+  "metric": "roc_auc",
+  "n_repeats": 15,
+  "random_state": 42,
+  "evaluation_split": "held_out_stratified_test_20_percent",
+  "test_sample_size": 2000,
+  "pipeline_artifact": "failure_pipeline.joblib",
+  "generated_at": "2026-10-21T15:43:56.663684+00:00",
+  "importances": [
+    {
+      "feature": "Air temperature [K]",
+      "importance_mean": 0.142,
+      "importance_std": 0.0223,
+      "rank": 1
+    },
+    {
+      "feature": "Tool wear [min]",
+      "importance_mean": 0.1216,
+      "importance_std": 0.0116,
+      "rank": 2
+    },
+    {
+      "feature": "Torque [Nm]",
+      "importance_mean": 0.0887,
+      "importance_std": 0.0048,
+      "rank": 3
+    },
+    {
+      "feature": "Rotational speed [rpm]",
+      "importance_mean": 0.0544,
+      "importance_std": 0.0053,
+      "rank": 4
+    },
+    {
+      "feature": "Process temperature [K]",
+      "importance_mean": 0.0188,
+      "importance_std": 0.0067,
+      "rank": 5
+    },
+    {
+      "feature": "Type",
+      "importance_mean": 0.0012,
+      "importance_std": 0.0043,
+      "rank": 6
+    }
+  ],
+  "interpretation": "Higher importance_mean indicates that shuffling this sensor value significantly degrades the model's ability to distinguish failure from healthy states. Explanations describe model decision drivers, not definitive physical root causes."
+}
